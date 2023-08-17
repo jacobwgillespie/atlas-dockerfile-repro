@@ -13,3 +13,4 @@ RUN /usr/local/bin/docker-entrypoint.sh
 FROM $DIALECT
 
 COPY --from=builder /var/lib/mysql /var/lib/mysql
+RUN ls -lah /var/lib/mysql && exit 1
